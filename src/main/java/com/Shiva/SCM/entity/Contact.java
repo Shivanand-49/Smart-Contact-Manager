@@ -1,118 +1,48 @@
 package com.Shiva.SCM.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.Objects;
 
 @Entity
-@Table(name="CONTACT")
+@Table(name = "contacts") // PostgreSQL friendly
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Contact {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int cId;
-	private String name;
-	private String secondName;
-	private String  work;
-	
-	private String  email;
-	private String phone;
-	private String image;
-	
-	
-	@ManyToOne
-	@JsonIgnore
-	private User user;
-	
-	@Column(length=5000)
-	private String description;
 
-	public int getcId() {
-		return cId;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;   // ✅ changed from cId to id
 
-	public void setcId(int cId) {
-		this.cId = cId;
-	}
+    private String name;
+    private String secondName;
+    private String work;
+    private String email;
+    private String phone;
+    private String image;
 
-	public String getName() {
-		return name;
-	}
+    @ManyToOne
+    @JsonIgnore
+    private User user;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    @Column(length = 5000)
+    private String description;
 
-	public String getSecondName() {
-		return secondName;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Contact)) return false;
+        Contact contact = (Contact) obj;
+        return Objects.equals(id, contact.getId());
+    }
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
-	}
-
-	public String getWork() {
-		return work;
-	}
-
-	public void setWork(String work) {
-		this.work = work;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return this.cId==((Contact)obj).getcId();
-	}
-
-	 
-	
-	
-	
-
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
 }
