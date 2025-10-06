@@ -1,4 +1,4 @@
-package com.Shiva.SCM.dao;
+package com.Shiva.SCM.repository;
 
 import java.util.List;
 

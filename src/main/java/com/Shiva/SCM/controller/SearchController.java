@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.Shiva.SCM.dao.ContactRepository;
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.ContactRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import com.Shiva.SCM.entity.Contact;
 import com.Shiva.SCM.entity.User;
 

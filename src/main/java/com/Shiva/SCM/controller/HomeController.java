@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import com.Shiva.SCM.entity.User;
 import com.Shiva.SCM.helper.Message;
 

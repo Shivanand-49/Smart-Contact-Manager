@@ -1,6 +1,6 @@
 package com.Shiva.SCM.config;
 
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetailsService;

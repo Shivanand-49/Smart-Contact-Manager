@@ -19,8 +19,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.Shiva.SCM.dao.ContactRepository;
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.ContactRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import com.Shiva.SCM.entity.Contact;
 import com.Shiva.SCM.entity.User;
 import com.Shiva.SCM.helper.Message;

@@ -2,7 +2,7 @@ package com.Shiva.SCM.controller;
 
 import java.util.Random;
 
-import jakarta.servlet.http.HttpSession;   // ✅ javax → jakarta
+import jakarta.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Shiva.SCM.Service.EmailService;
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import com.Shiva.SCM.entity.User;
 
 import lombok.RequiredArgsConstructor;

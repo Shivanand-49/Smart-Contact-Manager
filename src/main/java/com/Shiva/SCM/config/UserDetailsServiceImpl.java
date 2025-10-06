@@ -1,6 +1,6 @@
 package com.Shiva.SCM.config;
 
-import com.Shiva.SCM.dao.UserRepository;
+import com.Shiva.SCM.repository.UserRepository;
 import com.Shiva.SCM.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

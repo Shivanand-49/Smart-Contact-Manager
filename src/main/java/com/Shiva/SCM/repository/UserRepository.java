@@ -1,4 +1,4 @@
-package com.Shiva.SCM.dao;
+package com.Shiva.SCM.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
